@@ -33,7 +33,7 @@
 
 _Illustrative reference diagrams below; replace with MCP-specific visuals for production documentation._
 
-_Diagram placeholder: Conceptual overview of the MCP ecosystem and its connections, showing the mobile app, gateway, multiple MCP hosts, and isolation boundaries; render as 16:9 SVG (minimum 1920x1080) with labeled nodes and trust-boundary shading (custom illustration pending)._
+_Diagram: System overview showing mobile app, gateway, and MCP hosts (16:9 SVG, minimum 1920x1080, custom illustration pending)._
 
 _Diagram placeholder: Gateway mediates traffic between the mobile app and multiple MCP hosts, highlighting auth, routing, translation, and rate-limit components; include directional arrows, per-profile rate limits, and legend for controls (16:9 SVG preferred; custom illustration pending)._
 
@@ -127,7 +127,7 @@ An **MCP Profile** is a server-side, immutable configuration that maps a user-fr
 
 _Gateway diagrams are illustrative placeholders; substitute with deployment-specific diagrams when available._
 
-_Diagram placeholder: Gateway layers for routing, auth, throttling, translation, and sanitization, including where policies and quotas are enforced; specify component hierarchy, logging taps, and error handling nodes (16:9 SVG preferred; custom illustration pending)._
+_Diagram: Gateway architecture with routing, auth, throttling, translation, and policy enforcement layers (16:9 SVG, custom illustration pending)._
 
 _Diagram placeholder: Operational view of the gateway within production stacks, showing ingress, service mesh, observability, and rollback levers; include deployment tiers (dev/stage/prod), HPA/limits, and alerting hooks (16:9 SVG preferred; custom illustration pending)._
 
@@ -320,7 +320,7 @@ _Diagram placeholder: Operational view of the gateway within production stacks, 
 
 ## 14) Definition of Success (MVP)
 
-* Users can switch between MCPs in <2 taps (measured via client analytics tap counts; p50 within first 30 days)
+* Users can switch between MCPs in <2 taps (median tap count per switch from client analytics, measured over first 30 days)
 * >=80% requests succeed (accounts for expected user/network errors; platform target >=95% service-side success; measured via gateway logs over first 30 days)
 * Median latency <5s (p50 gateway timing over first 30 days)
 * Zero abuse incidents in first cohort (tracked via abuse alerts/blocks over first 30 days)
