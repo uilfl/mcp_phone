@@ -33,9 +33,7 @@
 
 _Illustrative reference diagrams below; replace with MCP-specific visuals for production documentation._
 
-![Conceptual overview of the MCP ecosystem and its connections](https://cdn.analyticsvidhya.com/wp-content/uploads/2025/04/Understanding-MCP.webp)
-
-*Figure: High-level MCP ecosystem showing how components interconnect.*
+_Diagram placeholder: Conceptual overview of the MCP ecosystem and its connections (custom illustration pending)._
 
 _Diagram placeholder: Gateway mediates traffic between the mobile app and multiple MCP hosts (custom illustration pending)._
 
@@ -129,13 +127,9 @@ An **MCP Profile** is a server-side, immutable configuration that maps a user-fr
 
 _Gateway diagrams are illustrative placeholders; substitute with deployment-specific diagrams when available._
 
-![Gateway request handling pipeline with policy enforcement](https://www.atatus.com/blog/content/images/2022/09/api-gateway.png)
+_Diagram placeholder: Gateway layers for routing, auth, throttling, and sanitization (custom illustration pending)._
 
-*Figure: Gateway layers for routing, auth, and throttling.*
-
-![Gateway deployment diagram with ingress, services, and observability](https://i0.wp.com/www.phdata.io/wp-content/uploads/2024/10/article-image1-1.png)
-
-*Figure: Operational view of the gateway in production stacks.*
+_Diagram placeholder: Operational view of the gateway within production stacks (custom illustration pending)._
 
 ### Mandatory Functions
 
@@ -316,11 +310,11 @@ _Gateway diagrams are illustrative placeholders; substitute with deployment-spec
 
 ### Must Be True Before Public Release
 
-* [ ] Gateway rate limiting active
-* [ ] All MCP Profiles audited
-* [ ] App Store disclosures approved
-* [ ] Kill switch tested
-* [ ] Error states verified
+* Gateway rate limiting active
+* All MCP Profiles audited
+* App Store disclosures approved
+* Kill switch tested
+* Error states verified
 
 ---
 
