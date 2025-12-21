@@ -31,11 +31,17 @@
 
 ## 2) System Architecture
 
-![Image](https://cdn.analyticsvidhya.com/wp-content/uploads/2025/04/Understanding-MCP.webp?utm_source=chatgpt.com)
+![Conceptual overview of the MCP ecosystem and its connections](https://cdn.analyticsvidhya.com/wp-content/uploads/2025/04/Understanding-MCP.webp?utm_source=chatgpt.com)
 
-![Image](https://mintcdn.com/truefoundry/-g83eZw0cKb4T5XU/images/docs/ai-gateway-mcp-architecture.png?auto=format&fit=max&n=-g83eZw0cKb4T5XU&q=85&s=ec9528496c8775161809b19afc74899e&utm_source=chatgpt.com)
+*Figure: High-level MCP ecosystem showing how components interconnect.*
 
-![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2A7Kfh76Y2ONwbYLpIfOHtVQ.png?utm_source=chatgpt.com)
+![AI gateway-centric MCP architecture showing mobile, gateway, and hosts](https://mintcdn.com/truefoundry/-g83eZw0cKb4T5XU/images/docs/ai-gateway-mcp-architecture.png?auto=format&fit=max&n=-g83eZw0cKb4T5XU&q=85&s=ec9528496c8775161809b19afc74899e&utm_source=chatgpt.com)
+
+*Figure: Gateway mediates traffic between the mobile app and multiple MCP hosts.*
+
+![Sequence of MCP request and response flow with intermediary gateway](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2A7Kfh76Y2ONwbYLpIfOHtVQ.png?utm_source=chatgpt.com)
+
+*Figure: End-to-end request/response path enforced by the gateway.*
 
 ### Components
 
@@ -123,9 +129,13 @@ An **MCP Profile** is a server-side, immutable configuration that maps a user-fr
 
 ## 5) Gateway Responsibilities (Critical)
 
-![Image](https://www.atatus.com/blog/content/images/2022/09/api-gateway.png?utm_source=chatgpt.com)
+![Gateway request handling pipeline with policy enforcement](https://www.atatus.com/blog/content/images/2022/09/api-gateway.png?utm_source=chatgpt.com)
 
-![Image](https://i0.wp.com/www.phdata.io/wp-content/uploads/2024/10/article-image1-1.png?utm_source=chatgpt.com)
+*Figure: Gateway layers for routing, auth, and throttling.*
+
+![Gateway deployment diagram with ingress, services, and observability](https://i0.wp.com/www.phdata.io/wp-content/uploads/2024/10/article-image1-1.png?utm_source=chatgpt.com)
+
+*Figure: Operational view of the gateway in production stacks.*
 
 ### Mandatory Functions
 
