@@ -33,7 +33,7 @@
 
 _Illustrative reference diagrams below; replace with MCP-specific visuals for production documentation._
 
-_Diagram placeholder: Conceptual overview of the MCP ecosystem and its connections, showing the mobile app, gateway, multiple MCP hosts, and isolation boundaries; render as 16:9 SVG with labeled nodes and trust-boundary shading (custom illustration pending)._
+_Diagram placeholder: Conceptual overview of the MCP ecosystem and its connections, showing the mobile app, gateway, multiple MCP hosts, and isolation boundaries; render as 16:9 SVG (minimum 1920x1080) with labeled nodes and trust-boundary shading (custom illustration pending)._
 
 _Diagram placeholder: Gateway mediates traffic between the mobile app and multiple MCP hosts, highlighting auth, routing, translation, and rate-limit components; include directional arrows, per-profile rate limits, and legend for controls (16:9 SVG preferred; custom illustration pending)._
 
@@ -320,10 +320,10 @@ _Diagram placeholder: Operational view of the gateway within production stacks, 
 
 ## 14) Definition of Success (MVP)
 
-* Users can switch between MCPs in <2 taps
-* >=80% requests succeed (accounts for expected user/network errors; platform target >=95% service-side success)
-* Median latency <5s
-* Zero abuse incidents in first cohort
+* Users can switch between MCPs in <2 taps (measured via client analytics tap counts; p50 within first 30 days)
+* >=80% requests succeed (accounts for expected user/network errors; platform target >=95% service-side success; measured via gateway logs over first 30 days)
+* Median latency <5s (p50 gateway timing over first 30 days)
+* Zero abuse incidents in first cohort (tracked via abuse alerts/blocks over first 30 days)
 
 ---
 
