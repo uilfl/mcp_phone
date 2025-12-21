@@ -1,0 +1,37 @@
+{
+  "id": "notes",
+  "name": "Notes Assistant",
+  "description": "Create, organize, and search your notes with markdown support",
+  "icon": "📝",
+  "version": "1.0.0",
+  "capabilities": [
+    "notes_create",
+    "notes_read",
+    "notes_update",
+    "notes_delete",
+    "notes_search",
+    "notes_tag"
+  ],
+  "configuration": {
+    "api_endpoint": "/notes",
+    "markdown_enabled": true,
+    "max_note_size": 1048576,
+    "auto_save": true
+  },
+  "isActive": true,
+  "mcpServerUrl": "http://localhost:3001/mcp/notes",
+  "authentication": {
+    "type": "bearer",
+    "required": true
+  },
+  "rateLimits": {
+    "requestsPerMinute": 60,
+    "requestsPerHour": 2000
+  },
+  "metadata": {
+    "author": "MCP Phone Team",
+    "homepage": "https://github.com/uilfl/mcp_phone",
+    "license": "MIT",
+    "tags": ["notes", "markdown", "documentation"]
+  }
+}

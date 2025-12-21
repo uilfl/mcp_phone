@@ -1,0 +1,36 @@
+{
+  "id": "calendar",
+  "name": "Calendar Manager",
+  "description": "Manage calendar events, reminders, and scheduling",
+  "icon": "📅",
+  "version": "1.0.0",
+  "capabilities": [
+    "calendar_read",
+    "calendar_write",
+    "calendar_delete",
+    "reminders_create",
+    "reminders_list"
+  ],
+  "configuration": {
+    "api_endpoint": "/calendar",
+    "sync_enabled": true,
+    "sync_interval": 300,
+    "timezone": "UTC"
+  },
+  "isActive": true,
+  "mcpServerUrl": "http://localhost:3001/mcp/calendar",
+  "authentication": {
+    "type": "oauth2",
+    "required": true
+  },
+  "rateLimits": {
+    "requestsPerMinute": 30,
+    "requestsPerHour": 500
+  },
+  "metadata": {
+    "author": "MCP Phone Team",
+    "homepage": "https://github.com/uilfl/mcp_phone",
+    "license": "MIT",
+    "tags": ["calendar", "events", "scheduling", "reminders"]
+  }
+}

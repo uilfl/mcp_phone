@@ -1,0 +1,37 @@
+{
+  "id": "tasks",
+  "name": "Task Manager",
+  "description": "Organize and track your tasks with priority levels and deadlines",
+  "icon": "✅",
+  "version": "1.0.0",
+  "capabilities": [
+    "tasks_create",
+    "tasks_read",
+    "tasks_update",
+    "tasks_delete",
+    "tasks_complete",
+    "tasks_prioritize"
+  ],
+  "configuration": {
+    "api_endpoint": "/tasks",
+    "priority_levels": ["low", "medium", "high", "urgent"],
+    "allow_subtasks": true,
+    "max_tasks_per_user": 1000
+  },
+  "isActive": true,
+  "mcpServerUrl": "http://localhost:3001/mcp/tasks",
+  "authentication": {
+    "type": "bearer",
+    "required": true
+  },
+  "rateLimits": {
+    "requestsPerMinute": 60,
+    "requestsPerHour": 2000
+  },
+  "metadata": {
+    "author": "MCP Phone Team",
+    "homepage": "https://github.com/uilfl/mcp_phone",
+    "license": "MIT",
+    "tags": ["tasks", "productivity", "todo"]
+  }
+}
