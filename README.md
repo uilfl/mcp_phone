@@ -37,13 +37,9 @@ _Illustrative reference diagrams below; replace with MCP-specific visuals for pr
 
 *Figure: High-level MCP ecosystem showing how components interconnect.*
 
-![AI gateway-centric MCP architecture showing mobile, gateway, and hosts](https://mintcdn.com/truefoundry/-g83eZw0cKb4T5XU/images/docs/ai-gateway-mcp-architecture.png?auto=format&fit=max&n=-g83eZw0cKb4T5XU&q=85&s=ec9528496c8775161809b19afc74899e)
+_Diagram placeholder: Gateway mediates traffic between the mobile app and multiple MCP hosts (custom illustration pending)._
 
-*Figure: Gateway mediates traffic between the mobile app and multiple MCP hosts.*
-
-![Sequence of MCP request and response flow with intermediary gateway](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2A7Kfh76Y2ONwbYLpIfOHtVQ.png)
-
-*Figure: End-to-end request/response path enforced by the gateway.*
+_Diagram placeholder: End-to-end request/response path enforced by the gateway (custom illustration pending)._
 
 ### Components
 
