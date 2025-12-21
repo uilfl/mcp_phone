@@ -31,6 +31,8 @@
 
 ## 2) System Architecture
 
+_Illustrative reference diagrams below; replace with MCP-specific visuals for production documentation._
+
 ![Conceptual overview of the MCP ecosystem and its connections](https://cdn.analyticsvidhya.com/wp-content/uploads/2025/04/Understanding-MCP.webp?utm_source=chatgpt.com)
 
 *Figure: High-level MCP ecosystem showing how components interconnect.*
@@ -128,6 +130,8 @@ An **MCP Profile** is a server-side, immutable configuration that maps a user-fr
 ---
 
 ## 5) Gateway Responsibilities (Critical)
+
+_Gateway diagrams are illustrative placeholders; substitute with deployment-specific diagrams when available._
 
 ![Gateway request handling pipeline with policy enforcement](https://www.atatus.com/blog/content/images/2022/09/api-gateway.png?utm_source=chatgpt.com)
 
