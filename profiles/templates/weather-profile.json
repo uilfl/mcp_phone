@@ -1,0 +1,35 @@
+{
+  "id": "weather",
+  "name": "Weather Assistant",
+  "description": "Get current weather, forecasts, and weather alerts for any location",
+  "icon": "🌤️",
+  "version": "1.0.0",
+  "capabilities": [
+    "weather_current",
+    "weather_forecast",
+    "weather_alerts",
+    "weather_historical"
+  ],
+  "configuration": {
+    "api_endpoint": "/weather",
+    "cache_duration": 300,
+    "default_units": "metric",
+    "max_forecast_days": 7
+  },
+  "isActive": true,
+  "mcpServerUrl": "http://localhost:3001/mcp/weather",
+  "authentication": {
+    "type": "api_key",
+    "required": true
+  },
+  "rateLimits": {
+    "requestsPerMinute": 60,
+    "requestsPerHour": 1000
+  },
+  "metadata": {
+    "author": "MCP Phone Team",
+    "homepage": "https://github.com/uilfl/mcp_phone",
+    "license": "MIT",
+    "tags": ["weather", "forecast", "climate"]
+  }
+}

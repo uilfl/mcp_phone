@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Profile",
+  "description": "Schema for MCP profile configuration",
+  "type": "object",
+  "required": ["id", "name", "description", "version", "capabilities"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$",
+      "description": "Unique identifier for the profile"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "Display name of the profile"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "description": "Brief description of the profile's functionality"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Emoji or icon identifier for the profile"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of the profile"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9_]+$"
+      },
+      "minItems": 1,
+      "description": "List of capabilities provided by this profile"
+    },
+    "configuration": {
+      "type": "object",
+      "description": "Profile-specific configuration"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the profile is currently active"
+    },
+    "mcpServerUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the MCP server for this profile"
+    },
+    "authentication": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["none", "api_key", "oauth2", "bearer"]
+        },
+        "required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "rateLimits": {
+      "type": "object",
+      "properties": {
+        "requestsPerMinute": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requestsPerHour": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string",
+          "format": "uri"
+        },
+        "license": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
