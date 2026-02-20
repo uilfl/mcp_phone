@@ -125,6 +125,8 @@ mcp_phone/
 
 ## 🚀 Getting Started
 
+Before you dig into the code, read the official [Model Context Protocol Getting Started guide](https://modelcontextprotocol.io/docs/getting-started/intro). The repository mirrors that walkthrough across the key folders (`mobile_app/`, `gateway/`, and `profiles/`), so the concepts and strategies in the guide map directly to the files here.
+
 ### Prerequisites
 
 - **Flutter SDK** (3.0.0 or higher)
