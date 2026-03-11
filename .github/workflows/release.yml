@@ -1,0 +1,63 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  gateway-artifact:
+    name: Gateway artifact
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: gateway
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create gateway source archive
+        run: |
+          tar -czf ../mcp-gateway-${GITHUB_REF_NAME:-manual}.tar.gz .
+
+      - name: Upload gateway artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcp-gateway-${{ github.ref_name || 'manual' }}
+          path: mcp-gateway-${{ github.ref_name || 'manual' }}.tar.gz
+
+  mobile-artifact:
+    name: Mobile artifact
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mobile_app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Android APK
+        run: flutter build apk --release
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcp-phone-apk-${{ github.ref_name || 'manual' }}
+          path: mobile_app/build/app/outputs/flutter-apk/app-release.apk
