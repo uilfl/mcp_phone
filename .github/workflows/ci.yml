@@ -7,6 +7,9 @@ on:
       - master
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   gateway:
     name: Gateway checks
@@ -28,7 +31,15 @@ jobs:
 
       - name: Lint (if configured)
         run: |
-          if [ -f .eslintrc ] || [ -f .eslintrc.json ] || [ -f .eslintrc.js ] || [ -f eslint.config.js ]; then
+          HAS_ESLINT_CONFIG=false
+
+          if [ -f .eslintrc ] || [ -f .eslintrc.json ] || [ -f .eslintrc.js ] || [ -f .eslintrc.cjs ] || [ -f .eslintrc.yml ] || [ -f .eslintrc.yaml ] || [ -f eslint.config.js ]; then
+            HAS_ESLINT_CONFIG=true
+          elif [ -f package.json ] && grep -q '"eslintConfig"' package.json; then
+            HAS_ESLINT_CONFIG=true
+          fi
+
+          if [ "$HAS_ESLINT_CONFIG" = true ]; then
             npm run lint
           else
             echo "No ESLint config found. Skipping lint."
