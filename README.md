@@ -276,8 +276,7 @@ This repository includes GitHub Actions workflows for continuous integration and
 
 If this project helps you, you can support development:
 
-- Buy Me a Coffee: [https://buymeacoffee.com/your-username](https://buymeacoffee.com/your-username)
-  _Replace `your-username` with your personal Buy Me a Coffee profile._
+- Buy Me a Coffee: [https://buymeacoffee.com/hermit_world](https://buymeacoffee.com/hermit_world)
 
 ## 📄 License
 
