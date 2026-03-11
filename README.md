@@ -2,6 +2,9 @@
 
 A secure, scalable mobile application for Android and iOS that enables users to interact with multiple MCP (Model Context Protocol) services through curated profiles.
 
+[![CI](https://github.com/uilfl/mcp_phone/actions/workflows/ci.yml/badge.svg)](https://github.com/uilfl/mcp_phone/actions/workflows/ci.yml)
+[![Release Pipeline](https://github.com/uilfl/mcp_phone/actions/workflows/release.yml/badge.svg)](https://github.com/uilfl/mcp_phone/actions/workflows/release.yml)
+
 ## 🎯 Executive Summary
 
 MCP Phone is designed to ship a **public, multi-MCP mobile app** safely and quickly by building three parallel components:
@@ -20,9 +23,12 @@ The application deliberately **does not expose MCP internals** to users, providi
 - [Getting Started](#getting-started)
 - [Development](#development)
 - [Deployment](#deployment)
+- [CI/CD](#cicd)
 - [Security](#security)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
+- [Open Source](#open-source)
+- [Support](#support)
 - [License](#license)
 
 ## ✨ Features
@@ -250,6 +256,27 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## 🌍 Open Source
+
+This project is maintained as an open source project under the MIT License. Contributions are welcome through:
+
+- GitHub Issues for bugs and feature requests
+- Pull Requests for code and documentation improvements
+- Responsible disclosure for security findings (see `docs/security/SECURITY.md`)
+
+## 🔄 CI/CD
+
+This repository includes GitHub Actions workflows for continuous integration and delivery:
+
+- **CI (`.github/workflows/ci.yml`)**: validates gateway and mobile app changes on pushes and pull requests
+- **Release (`.github/workflows/release.yml`)**: builds release artifacts on version tags and manual dispatch
+
+## ☕ Support
+
+If this project helps you, you can support development:
+
+- Buy Me a Coffee: [https://buymeacoffee.com/hermit_world](https://buymeacoffee.com/hermit_world)
 
 ## 📄 License
 
